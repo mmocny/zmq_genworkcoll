@@ -12,8 +12,11 @@
 /******************************************************************************/
 
 void start_generator( int gport, std::function< void(std::ostream &) > create_request );
+
 void start_collector( int cport, std::function< void(std::istream &) > process_result );
-void start_worker( std::string server_addr, int gport, int cport, std::function< void(std::istream &, std::ostream &) > process_work );
+
+void start_worker( std::string server_addr, int gport, int cport, 
+                   std::function< void(std::istream &, std::ostream &) > process_work );
 
 /******************************************************************************/
 
